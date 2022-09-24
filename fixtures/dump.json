@@ -1,0 +1,140 @@
+[
+{
+  "model": "webapp.picture",
+  "pk": 1,
+  "fields": {
+    "picture": "pictures/1.png",
+    "caption": "Картинка 1",
+    "created_at": "2022-09-24T12:16:56.680Z",
+    "author": 1,
+    "album": null,
+    "private": false,
+    "favourites": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 2,
+  "fields": {
+    "picture": "pictures/2.png",
+    "caption": "Картинка 2",
+    "created_at": "2022-09-24T08:17:35.812Z",
+    "author": 1,
+    "album": 1,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 3,
+  "fields": {
+    "picture": "pictures/3.png",
+    "caption": "Картинка 3",
+    "created_at": "2022-09-24T08:17:57.403Z",
+    "author": 1,
+    "album": 2,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 4,
+  "fields": {
+    "picture": "pictures/4.png",
+    "caption": "Картинка 4",
+    "created_at": "2022-09-24T12:11:45.701Z",
+    "author": 1,
+    "album": 3,
+    "private": false,
+    "favourites": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 5,
+  "fields": {
+    "picture": "pictures/Bears.jpg",
+    "caption": "Картинка 5",
+    "created_at": "2022-09-24T08:18:43.446Z",
+    "author": 1,
+    "album": null,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 6,
+  "fields": {
+    "picture": "pictures/Photo_by_SpaceX.jpg",
+    "caption": "Картинка 6",
+    "created_at": "2022-09-24T08:19:05.892Z",
+    "author": 1,
+    "album": 1,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 7,
+  "fields": {
+    "picture": "pictures/Televisor.jpg",
+    "caption": "Картинка 7",
+    "created_at": "2022-09-24T08:19:26.567Z",
+    "author": 1,
+    "album": 2,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.picture",
+  "pk": 8,
+  "fields": {
+    "picture": "pictures/Pengun.jpg",
+    "caption": "Картинка 8",
+    "created_at": "2022-09-24T08:19:47.452Z",
+    "author": 1,
+    "album": 3,
+    "private": false,
+    "favourites": []
+  }
+},
+{
+  "model": "webapp.album",
+  "pk": 1,
+  "fields": {
+    "name": "Альбом 1",
+    "description": "",
+    "author": 1,
+    "created_at": "2022-09-24T08:15:35.150Z"
+  }
+},
+{
+  "model": "webapp.album",
+  "pk": 2,
+  "fields": {
+    "name": "Альбом 2",
+    "description": "",
+    "author": 1,
+    "created_at": "2022-09-24T08:15:56.254Z"
+  }
+},
+{
+  "model": "webapp.album",
+  "pk": 3,
+  "fields": {
+    "name": "Альбом 3",
+    "description": "",
+    "author": 1,
+    "created_at": "2022-09-24T08:16:09.445Z"
+  }
+}
+]

@@ -24,5 +24,8 @@
         </p>
     </div>
     <p>Пользователи, которым понравилась эта картинка:</p>
-    <a href="{% url "webapp:pictures" %}">На главную</a>
+    {% for user in picture.favourites.all %}
+        <a href="{% url "accounts:profile" user.pk %}">{{ user.username }}</a>
+    {% endfor %}
+    <p><a href="{% url "webapp:pictures" %}">На главную</a></p>
 {% endblock %}
