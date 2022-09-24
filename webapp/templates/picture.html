@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ picture.caption }}{% endblock %}
+
+{% block content %}
+    <p>
+        <a href="{% url "webapp:update" picture.pk %}">Изменить</a>
+        <a href="{% url "webapp:delete" picture.pk %}">Удалить</a>
+    </p>
+    <div style="display: inline-block; vertical-align: top;">
+        <img src="{{ picture.picture.url }}" height="250" alt="{{ picture.caption }}">
+    </div>
+    <div style="display: inline-block; vertical-align: top;">
+        <p>
+            {{ picture.caption }}<br>
+            {{ picture.author }}<br>
+            {{ picture.created_at|date:'d.m.y, H:i' }}<br>
+            {% if picture.album.name %}
+                <a href="{% url "webapp:album" picture.album.pk %}">{{ picture.album.name }}</a>
+            {% else %}
+                Картинка не в альбоме
+            {% endif %}
+        </p>
+    </div>
+    <p>Пользователи, которым понравилась эта картинка:</p>
+    <a href="{% url "webapp:pictures" %}">На главную</a>
+{% endblock %}

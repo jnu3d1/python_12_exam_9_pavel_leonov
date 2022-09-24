@@ -11,7 +11,7 @@ class Picture(models.Model):
     created_at = models.DateTimeField(auto_now=True, verbose_name='Время создания')
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='pictures',
                                verbose_name='Автор')
-    album = models.ForeignKey('webapp.Album', on_delete=models.PROTECT, blank=True, null=True, related_name='pictures',
+    album = models.ForeignKey('webapp.Album', on_delete=models.CASCADE, blank=True, null=True, related_name='pictures',
                               verbose_name='Альбом')
     private = models.BooleanField(default=False, verbose_name='Приватное')
     favourites = models.ManyToManyField(get_user_model(), related_name='favourites', verbose_name='Избранное')

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Галерея{% endblock %}
+
+{% block content %}
+    <h1>Галерея</h1>
+    <p><a href="{% url "webapp:upload" %}">Загрузить картинку</a></p>
+    {% for picture in pictures %}
+        <div style="display: inline-block;">
+            <a href="{% url "webapp:picture" picture.pk %}"><img src="{{ picture.picture.url }}" height="100"
+                                                                 alt="{{ picture.caption }}"></a>
+            <p>
+                {{ picture.caption }}<br>
+                {{ picture.author }}<br>
+                {{ picture.created_at|date:'d.m.y, H:i' }}<br>
+                {% if picture.album.name %}
+                    <a href="{% url "webapp:album" picture.album.pk %}">{{ picture.album.name }}</a>
+                {% else %}
+                    Картинка не в альбоме
+                {% endif %}
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}

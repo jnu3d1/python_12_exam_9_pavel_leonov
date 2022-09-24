@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ album.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ album.name }}</h1>
+    <p>
+        <a href="{% url "webapp:update_album" album.pk %}">Изменить</a>
+        <a href="{% url "webapp:delete_album" album.pk %}">Удалить</a>
+    </p>
+    <p>{{ album.description|default:"Нет описания" }}</p>
+    {% for picture in pictures %}
+        <div style="display: inline-block;">
+            <a href="{% url "webapp:picture" picture.pk %}"><img src="{{ picture.picture.url }}" height="100"
+                                                                 alt="{{ picture.caption }}"></a>
+            <p>
+                {{ picture.caption }}<br>
+                {{ picture.author }}<br>
+                {{ picture.created_at|date:'d.m.y, H:i' }}<br>
+            </p>
+        </div>
+    {% endfor %}
+    <p>
+        <a href="{% url "webapp:pictures" %}">На главную</a>
+    </p>
+{% endblock %}
